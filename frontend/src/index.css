@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Instrument+Serif", serif;
+
+  --color-govern-charcoal: #0A0B0D;
+  --color-govern-forest: #141815; /* Deep institutional green */
+  --color-govern-gold: #B89B72; /* Muted architectural brass */
+  --color-govern-silk: #EAE6DF; /* Premium document paper */
+  --color-govern-ink: #050505;
+}
+
+@layer base {
+  body {
+    @apply bg-govern-charcoal text-govern-silk font-sans antialiased selection:bg-govern-gold selection:text-govern-charcoal;
+  }
+}
+
+/* More sophisticated texture overlay: Linen + subtle grain */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    url("https://www.transparenttextures.com/patterns/linen.png");
+  opacity: 0.15;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.institutional-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(184, 155, 114, 0.05) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.text-letterpress {
+  text-shadow: 0px 1px 1px rgba(255,255,255,0.05), 0px -1px 1px rgba(0,0,0,0.4);
+}
+
+.border-debossed {
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.glass-card {
+  background: rgba(234, 230, 223, 0.05); /* Warm silk/parchment tint */
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(184, 155, 114, 0.2);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.6),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.login-input {
+  @apply w-full bg-govern-ink/60 border border-govern-gold/15 px-4 py-4 text-govern-silk placeholder:text-govern-silk/10 focus:outline-none focus:border-govern-gold/40 focus:ring-1 focus:ring-govern-gold/30 transition-all duration-300 rounded-sm text-sm;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.institutional-grid-fine {
+  background-image: 
+    linear-gradient(rgba(184, 155, 114, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184, 155, 114, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+@keyframes draw-check {
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: 0; }
+}
+
+.animate-draw-check {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-check 1.2s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+@keyframes slow-sweep {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(200%) skewX(-15deg); }
+}
+
+.light-sweep {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(to right, transparent, rgba(193, 164, 126, 0.05), transparent);
+  animation: slow-sweep 12s infinite linear;
+}
+
+@keyframes grain {
+  0%, 100% { transform:translate(0, 0); }
+  10% { transform:translate(-5%, -10%); }
+  20% { transform:translate(-15%, 5%); }
+  30% { transform:translate(7%, -25%); }
+  40% { transform:translate(-5%, 25%); }
+  50% { transform:translate(-15%, 10%); }
+  60% { transform:translate(15%, 0%); }
+  70% { transform:translate(0%, 15%); }
+  80% { transform:translate(3%, 35%); }
+  90% { transform:translate(-10%, 10%); }
+}
+
+@keyframes float-mote {
+  0% { transform: translateY(0px) translateX(0px); opacity: 0; }
+  20% { opacity: 0.4; }
+  80% { opacity: 0.4; }
+  100% { transform: translateY(-100vh) translateX(40px); opacity: 0; }
+}
+
+.dust-mote {
+  position: absolute;
+  background: var(--color-govern-gold);
+  border-radius: 50%;
+  filter: blur(1.5px);
+  pointer-events: none;
+  z-index: 15;
+}

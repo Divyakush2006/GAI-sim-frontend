@@ -1,0 +1,32 @@
+# render.yaml — Render Free Tier Deployment Config
+# Infrastructure as Code for GovernAI Studio
+
+services:
+  - type: web
+    name: governai-api
+    runtime: docker
+    plan: free
+    region: singapore  # Closest to India
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DEBUG
+        value: "false"
+      - key: DATABASE_URL
+        sync: false  # Set manually in Render dashboard
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: CEREBRAS_API_KEY
+        sync: false
+      - key: SAMBANOVA_API_KEY
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true  # Auto-generate secure secret
+      - key: RESEND_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        value: '["https://governai.vercel.app"]'
