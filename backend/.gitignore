@@ -1,0 +1,46 @@
+# GovernAI Studio — Git Ignore
+
+# Environment
+.env
+.env.local
+.env.production
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# GraphRAG data (large, rebuilt from corpus)
+graph_data/
+!graph_data/.gitkeep
+
+# Corpus PDFs (large, stored separately)
+corpus/raw/*.pdf
+corpus/processed/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (frontend, when added)
+node_modules/
+.next/
+out/
+
+# Logs
+*.log
