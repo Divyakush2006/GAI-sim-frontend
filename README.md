@@ -608,3 +608,12 @@ This project is developed by the **GovernAI Tech Team** for institutional govern
 <p align="center">
   <strong>GovernAI Studio</strong> — Because governance decisions deserve better than a multiple-choice quiz.
 </p>
+
+---
+
+<p align="center">
+  Frontend designed and developed by <a href="https://divyakush.is-a.dev"><strong>Divyakush Punjabi</strong></a><br />
+  <a href="https://divyakush.is-a.dev">Portfolio</a> ·
+  <a href="https://github.com/Divyakush2006">GitHub</a> ·
+  <a href="https://linkedin.com/in/divyakush-punjabi">LinkedIn</a>
+</p>
