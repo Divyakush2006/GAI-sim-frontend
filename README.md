@@ -14,6 +14,7 @@
   <a href="#architecture"><img src="https://img.shields.io/badge/API_Endpoints-12_Live-f59e0b?style=flat-square" alt="Endpoints"/></a>
   <a href="#database"><img src="https://img.shields.io/badge/Database-Neon_PostgreSQL-0ea5e9?style=flat-square" alt="Database"/></a>
   <a href="#license"><img src="https://img.shields.io/badge/Cost-₹0%2Fmonth-22c55e?style=flat-square" alt="Cost"/></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/Divyakush2006/GAI-sim-frontend?style=flat-square&color=blue" alt="License: Apache 2.0"/></a>
 </p>
 
 <p align="center">
@@ -562,6 +563,8 @@ GovernAI Studio runs entirely on free-tier services because:
 | **Email Domain** | Restricted to `gov.in`, `nic.in`, `governai.in` (+ `gmail.com` in dev) |
 | **Secrets** | `.env` excluded from version control; `.env.example` provided |
 
+**Reporting a vulnerability:** please report it privately as described in the [security policy](https://github.com/Divyakush2006/.github/blob/main/SECURITY.md), not in a public issue.
+
 ---
 
 ## Contributing
@@ -601,7 +604,7 @@ We follow [Conventional Commits](https://www.conventionalcommits.org/):
 
 ## License
 
-This project is developed by the **GovernAI Tech Team** for institutional governance training. Contact the team for licensing and deployment inquiries.
+Released under the [Apache License 2.0](LICENSE). Built with the **GovernAI Tech Team** for institutional governance training; contact the team for deployment enquiries.
 
 ---
 
